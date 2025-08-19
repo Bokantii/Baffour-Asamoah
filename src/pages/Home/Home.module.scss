@@ -1,0 +1,124 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  main {
+    .heading {
+      text-transform: capitalize;
+      font-size: 3em;
+      width: 60%;
+    }
+    .subHeading {
+      font-size: 1.5em;
+      width: 60%;
+      margin-top: 1rem;
+    }
+  }
+  .cta {
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.5rem;
+    background-color: #565254;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  .approach {
+    width: 100%;
+    align-self: center;
+    .approach_body {
+      background-color: #d0cfcf;
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .approach_heading {
+        font-size: 3rem;
+        text-align: center;
+      }
+      .approach_content {
+        margin-top: 1rem;
+        line-height: 1.8;
+        font-size: 1.2rem;
+        text-align: center;
+        width: 70%;
+      }
+      .cta {
+        width: 20%;
+        text-align: center;
+        text-decoration: none;
+        padding: 1.5rem;
+        background-color: #565254;
+        margin-top: 2rem;
+        color: #ffffff;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .intro_body {
+    width: 45%;
+
+    .intro_body_heading {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    .intro_body_content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-top: 1rem;
+    }
+  }
+  .services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #d0cfcf;
+    .service_content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  }
+  .backgroundImg_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .client_testimonial {
+      width: 70%;
+      color: #ffffff;
+      font-size: 2rem;
+      text-align: center;
+      padding: 2rem;
+    }
+    .clientName {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+  .consultation {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+
+    p {
+      margin-bottom: 2rem;
+      background-color: #fffbfe;
+    }
+  }
+}

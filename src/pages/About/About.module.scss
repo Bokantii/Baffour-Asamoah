@@ -1,0 +1,16 @@
+@import "./../../sass/colors/colors.scss";
+@import "./../../sass/mixins/hero_text.scss";
+
+.aboutSection {
+  .heroContent {
+    @include heroTextContent;
+
+    .heroText {
+      @include heroText;
+    }
+  }
+  .info{
+    flex-direction: column;
+     width: 45%;
+  }
+}
