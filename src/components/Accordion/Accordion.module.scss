@@ -1,10 +1,26 @@
+@import "./../../sass/colors/colors.scss";
 .accordionItem {
   margin-bottom: 1rem;
+  border-top: 2px solid $color-davys-gray;
+  .accordionContent{
+    padding: .5rem;
+  }
+  button {
+    width: 100%;
+    background-color: $color-snow;
+    text-align: left;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: transparent;
+  color: $color-davys-gray;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -15,15 +31,15 @@
   transition: 0.4s;
 }
 
-.active,
-.accordion:hover {
-  background-color: #ccc;
-}
+// .active,
+// .accordion:hover {
+//   background-color: #ccc;
+// }
 
 .panel {
   padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
-  color:#000000;
+  color: #000000;
 }

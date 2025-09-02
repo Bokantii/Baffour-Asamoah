@@ -1,19 +1,30 @@
+@import "./../../sass/mixins/mobile_responsive.scss";
+@import './../../sass/colors/colors.scss';
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  overflow-x: hidden;
   height: 100%;
   main {
+   
     .heading {
       text-transform: capitalize;
       font-size: 3em;
       width: 60%;
+      @include respond(phone) {
+        font-size: 2em;
+        width: 100%;
+      }
     }
     .subHeading {
       font-size: 1.5em;
       width: 60%;
       margin-top: 1rem;
+      @include respond(phone) {
+        font-size: 1rem;
+        width: 100%;
+      }
     }
   }
   .cta {
@@ -24,6 +35,9 @@
     background-color: #565254;
     color: #ffffff;
     border-radius: 5px;
+    @include respond(phone) {
+      width: 100%;
+    }
   }
   .approach {
     width: 100%;
@@ -38,6 +52,9 @@
       .approach_heading {
         font-size: 3rem;
         text-align: center;
+        @include respond(phone) {
+          font-size: 2.5rem;
+        }
       }
       .approach_content {
         margin-top: 1rem;
@@ -45,6 +62,10 @@
         font-size: 1.2rem;
         text-align: center;
         width: 70%;
+        @include respond(phone) {
+          font-size: 1rem;
+          width: 100%;
+        }
       }
       .cta {
         width: 20%;
@@ -55,21 +76,35 @@
         margin-top: 2rem;
         color: #ffffff;
         border-radius: 5px;
+        @include respond(phone) {
+          width: 100%;
+        }
       }
     }
   }
 
   .intro_body {
     width: 45%;
-
+    @include respond(phone) {
+      width: 100%;
+    }
     .intro_body_heading {
       font-size: 3.5rem;
       margin-bottom: 1rem;
+      @include respond(phone) {
+        font-size: 2rem;
+        width: 100%;
+        margin-top: 0.8rem;
+      }
     }
     .intro_body_content {
       font-size: 1.2rem;
       line-height: 1.8;
       margin-top: 1rem;
+      @include respond(phone) {
+        font-size: 1rem;
+        text-align: center;
+      }
     }
   }
   .services {
@@ -80,12 +115,27 @@
     align-items: center;
     padding: 4rem;
     background-color: #d0cfcf;
+
     .service_content {
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2rem;
+      @include respond(phone) {
+        flex-direction: column;
+      }
+    }
+    .buttonContainer {
+      text-align: "center";
+      width: 50%;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
   .backgroundImg_content {
@@ -97,24 +147,30 @@
     flex-direction: column;
     .client_testimonial {
       width: 70%;
-      color: #ffffff;
+      color: $color-white;
       font-size: 2rem;
       text-align: center;
       padding: 2rem;
+      @include respond(phone) {
+        font-size: 1.3rem;
+      }
     }
     .clientName {
-      color: #ffffff;
+      color: $color-white;
       font-size: 1.5rem;
       font-weight: 300;
     }
   }
   .consultation {
-    width: 100%;
+    width: 80%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 2rem;
+    @include respond(phone) {
+      font-size: 1rem;
+    }
 
     p {
       margin-bottom: 2rem;

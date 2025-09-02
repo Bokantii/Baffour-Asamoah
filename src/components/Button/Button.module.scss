@@ -1,5 +1,6 @@
+@import './../../sass/mixins/mobile_responsive.scss';
 .cta{
-    width: 40%;
+    min-width: 50%;
     text-align: center;
     text-decoration: none;
     padding: 1.5rem;
@@ -8,4 +9,8 @@
     border-radius: 5px;
     display: inline-block;
     text-transform: uppercase;
+    @include respond(phone){
+      width: 100%;
+    
+    }
   }

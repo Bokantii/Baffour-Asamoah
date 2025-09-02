@@ -1,0 +1,52 @@
+//MEDIA QUERY MANAGER
+
+/*
+0-600px: mobile
+600-900px: Tablet portrait
+900-1200px: Tablet landscape
+[1200-1800px]: where our normal styles apply
+1800px+:Big desktop    
+*/
+
+// @mixin respond-phone {
+//     @media (max-width:600px){@content}
+// }
+
+/* 
+  $breakpoint arguments
+  
+  -phone
+  -tab-portrait
+  -tab-landscape
+  -big-desktop
+ORDER:Base + typograpghy > general layout + grid > page layout >components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-laptop {
+    @media (max-width: 90em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-portrait {
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-landscape {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+

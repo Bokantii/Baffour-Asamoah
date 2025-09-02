@@ -1,13 +1,72 @@
-import React from 'react'
-
+import React from "react";
+import Header from "../../components/Header/Header.jsx";
+import BlogItem from "../../components/BlogItem/BlogItem.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import classes from "./Blog.module.scss";
+import {useLocation} from 'react-router-dom';
 const Blog = () => {
-  return (
-    <div>Blog Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, minus culpa iure in ipsam voluptates rem aliquid facilis, delectus non pariatur facere totam quibusdam molestias recusandae dolore exercitationem assumenda ex.
-    Non dolorum dolorem cumque eius. Quos voluptatibus odio libero dolores ab, aut odit mollitia, consequuntur voluptatum magnam assumenda, voluptatem omnis enim pariatur asperiores repudiandae ad tempora modi quidem itaque similique!
-    Praesentium eligendi, laudantium beatae iste sunt consequatur aut quod ullam magni optio ad et? Cumque atque, beatae praesentium vel dolores repudiandae quidem itaque nihil temporibus, nesciunt natus numquam minus repellat.
-    Culpa quis tempora iure ipsa nostrum cum aspernatur repellendus, nesciunt, quidem veniam dignissimos repudiandae cumque quae. Vel natus dolorem earum architecto temporibus rerum dolores dolore, iure aliquid harum beatae illum!
-    Quod minima earum itaque qui quos, odio officiis sequi aliquam praesentium nam enim illum corporis, accusantium, consequatur voluptatum provident explicabo quibusdam ullam atque expedita. Architecto fugiat est quas nulla veniam.</div>
-  )
-}
+  const blogItems = [
+    {
+      id: 1,
+      imgSrc:
+        "https://images.unsplash.com/photo-1541976844346-f18aeac57b06?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
+      title: "Understanding Mental Wellness in Racialized Communities",
+      href: "/blog/mental-wellness",
+      alt: "",
+    },
+    {
+      id: 2,
+      imgSrc:
+        "https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
+      title: "The Role of Anti-Oppressive Practice in Social Work",
+      href: "/blog/anti-oppression",
+      alt: "",
+    },
+    {
+      id: 3,
+      imgSrc:
+        "https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D",
+      title: "Navigating Intergenerational Trauma in Families",
+      href: "/blog/trauma",
+      alt: "",
+    },
+    {
+      id: 4,
+      imgSrc:
+        "https://plus.unsplash.com/premium_photo-1664378617213-55fc3392600d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D",
+      title: "Building Culturally Grounded Mental Health Services",
+      href: "/blog/mental-health",
+      alt: "",
+    },
+    {
+      id: 5,
+      imgSrc:
+        "https://images.unsplash.com/photo-1616740793717-0aca29b92221?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D",
+      title: "Supporting Youth Through School-Based Social Work",
+      href: "/blog/youth-support",
+      alt: "",
+    },
+  ];
 
-export default Blog
+  return (
+    <>
+      <main className={classes.blog}>
+        <Header darkText />
+        <section className={classes.blogItems}>
+          {blogItems.map((blogItem) => (
+            <BlogItem
+              key={blogItem.id}
+              imgSrc={blogItem.imgSrc}
+              title={blogItem.title}
+              href={blogItem.href}
+              alt={blogItem.alt}
+            />
+          ))}
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default Blog;

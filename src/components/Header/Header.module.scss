@@ -1,7 +1,10 @@
+@import "./../../sass/mixins/mobile_responsive.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
   width: 80%;
+
   .homeLink {
     color: #ffffff;
     text-decoration: none;
@@ -12,16 +15,20 @@
     width: 50%;
     justify-content: space-between;
     align-items: center;
-
+    @include respond(tab-portrait) {
+      display: none;
+    }
+    @include respond(phone) {
+      display: none;
+    }
     li {
-        list-style-type: none;
+      list-style-type: none;
       .link {
         color: #ffffff;
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: 300;
         text-transform: capitalize;
-    
       }
     }
   }

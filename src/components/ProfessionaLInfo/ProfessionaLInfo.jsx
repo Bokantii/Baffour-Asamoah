@@ -7,9 +7,9 @@ const ProfessionaLInfo = ({ children, reversedFlex }) => {
     <section className={classes.introContainer}>
       <section
         className={classes.intro}
-        style={{
-          flexDirection: flexDirectionB,
-        }}
+        // style={{
+        //   flexDirection: flexDirectionB,
+        // }}
       >
         <img src={baffour} alt="Dr. Baffour smiling image" />
         {children}

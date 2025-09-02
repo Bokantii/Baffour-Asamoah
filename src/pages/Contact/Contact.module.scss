@@ -1,0 +1,87 @@
+@import "./../../sass/colors/colors.scss";
+@import "./../../sass/mixins/hero_text.scss";
+.contact {
+  background-color: $color-davys-gray;
+  .formSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-snow;
+    margin-top: 3rem;
+    color: $color-gray;
+    border-radius: 8px;
+    
+    @include respond(phone){
+        padding: 1rem 0;
+        
+      }
+    h1 {
+      text-transform: capitalize;
+      font-size: 7em;
+      @include respond(phone){
+        font-size: 3em;
+      }
+    }
+    p {
+      width: 55%;
+       @include respond(phone){
+        width: 100%;
+        padding: .9rem;
+      }
+    }
+    form {
+      color: $color-gray;
+      padding: 2rem;
+      margin-top: 1rem;
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      @include respond(phone){
+        width: 100%;
+      }
+      button{
+        padding: 1rem;
+        align-self: center;
+        width:25%;
+        margin-top: .9rem;
+        border: none;
+        border-radius: .4rem;
+        text-transform: capitalize;
+        color: $color-snow;
+        background-color: $color-davys-gray;
+        transition: background .5s ease;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-gray;
+        }
+        @include respond(phone){
+            width: 100%;
+        }
+      }
+      .formName {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        width: 100%;
+         @include respond(phone){
+            flex-direction: column;
+
+        }
+      }
+      .textAreaSection {
+        display: flex;
+        flex-direction: column;
+        textarea{
+            height:4rem;
+             border:1px solid $color-timberwolf;
+             padding: .5rem;
+             border-radius: .3rem;
+             outline: none;
+             
+        }
+      }
+    }
+  }
+}

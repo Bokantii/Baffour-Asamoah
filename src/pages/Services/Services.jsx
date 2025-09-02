@@ -28,13 +28,10 @@ const Services = () => {
 
   return (
     <main className={classes.services}>
-      <Hero url="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?w=800&auto=format&fit=crop&q=60">
-        <section className={classes.heroContent}>
-          <p className={classes.heroText}>
-            Compassionate care tailored to your mental wellness journey.
-          </p>
-        </section>
-      </Hero>
+      <Hero
+        url="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?w=800&auto=format&fit=crop&q=60"
+        heroText="Compassionate care tailored to your mental wellness journey."
+      />
 
       {/* Service list */}
       <section className={classes.serviceList}>
@@ -50,7 +47,7 @@ const Services = () => {
           ))}
         </section>
 
-        <p style={{ textAlign: "center", width: "50%", marginTop: "2rem" }}>
+        <p className={classes.ctaBtn}>
           <Button href="/contact">Book a Consultation</Button>
         </p>
       </section>
@@ -82,7 +79,7 @@ const Services = () => {
       {/* CTA */}
       <section className={classes.ctaSection}>
         <p className={classes.ctaText}>
-          Still exploring your options?{" "}
+          <span>Still exploring your options?</span><br/>
           <Link to="/contact" className={classes.ctaLink}>
             We’re here to help
           </Link>

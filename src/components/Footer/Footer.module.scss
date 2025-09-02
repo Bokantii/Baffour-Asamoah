@@ -1,9 +1,59 @@
-.footer{
-    width: 100vw;
-    background-color: #565254;
-    padding: 4rem;
-    text-align: center;
-    font-size: 14px;
-    color: #ffffff;
-    overflow-x: hidden;
+@import "./../../sass/colors/colors.scss";
+@import "./../../sass/mixins/mobile_responsive.scss";
+.footer {
+  width: 100vw;
+  background-color: #565254;
+  padding: 4rem;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  @include respond(phone) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.3rem;
+    .copyright {
+      font-size: 1rem;
+    }
+    @include respond(phone) {
+      gap: 1rem;
+    }
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      color: $color-snow;
+      .linkedinIcon {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li {
+      list-style-type: none;
+      margin-bottom: 0.5rem;
+      .link {
+        color: $color-snow;
+        text-transform: capitalize;
+        font-size: 1rem;
+      }
+    }
+  }
 }

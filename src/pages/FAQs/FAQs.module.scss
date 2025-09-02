@@ -1,0 +1,15 @@
+@import "./../../sass/colors/colors.scss";
+@import "./../../sass/mixins/hero_text.scss";
+
+.faqSection {
+  .heroContent {
+    @include heroTextContent;
+
+    .heroText {
+      @include heroText;
+    }
+  }
+.questions{
+    padding:2rem;
+}
+}

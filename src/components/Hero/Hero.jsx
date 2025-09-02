@@ -1,8 +1,15 @@
 import React from "react";
 import Header from "../../components/Header/Header.jsx";
 import classes from "./Hero.module.scss";
-
-const Hero = ({ children, url }) => {
+import ScrollFadeIn from "./../ScrollFadeIn/ScrollFadeIn";
+const Hero = ({ children, url, heroText, alternate }) => {
+  const heroContentVal = alternate ? null : (
+    <section className={classes.heroContent}>
+      <p className={classes.heroText}>
+        <ScrollFadeIn>{heroText}</ScrollFadeIn>
+      </p>
+    </section>
+  );
   return (
     <section
       className={classes.hero}
@@ -14,6 +21,12 @@ const Hero = ({ children, url }) => {
       }}
     >
       <Header />
+      {/* <section className={classes.heroContent}>
+        <p className={classes.heroText}>
+          {heroText}
+        </p>
+      </section> */}
+      {heroContentVal}
       {children}
     </section>
   );

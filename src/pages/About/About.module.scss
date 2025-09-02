@@ -9,8 +9,25 @@
       @include heroText;
     }
   }
-  .info{
+  .info {
     flex-direction: column;
-     width: 45%;
+    width: 45%;
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 0.7rem;
+
+      @include respond(phone) {
+        text-align: center;
+        margin-top: .5rem;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+    }
   }
 }

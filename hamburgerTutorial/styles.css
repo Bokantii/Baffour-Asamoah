@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground:#333;
+  --background:#fff;
+}
+
+.hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    /* background: red; */
+    width: max-content;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    cursor:pointer;
+}
+.hamburger-menu::after,
+.hamburger-menu::before,
+.hamburger-menu input {
+   content:"";
+   width:var(--bar-width);
+   height: var(--bar-height);
+   background-color: var(--foreground);
+  border-radius: 99999px;
+
+}
+
+.hamburger-menu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline:none;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked{
+    opacity:0;
+    width:0;
+    color:red;
+}
