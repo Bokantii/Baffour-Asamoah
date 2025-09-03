@@ -13,31 +13,31 @@ import Service from "../../components/Service/Service.jsx";
 
 const Home = () => {
   const myActivity = [
-    {
-      id: 1,
-      title: "Individual Therapy",
-      description:
-        "Personalized therapy sessions to address individual mental health needs.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1664378616928-dc6842677183?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
-    },
-    {
-      id: 2,
-      title: "Individual Therapy",
-      description:
-        "Personalized therapy sessions to address individual mental health needs.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1665990292585-6a39c5229bc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
-    },
-    {
-      id: 3,
-      title: "Individual Therapy",
-      description:
-        "Personalized therapy sessions to address individual mental health needs.",
-      image:
-        "https://images.unsplash.com/photo-1743767588082-e754fc9874be?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJhaW4lMjB0aGVyYXB5fGVufDB8fDB8fHww",
-    },
-  ];
+  {
+    id: 1,
+    title: "Cognitive Behavioral Therapy (CBT)",
+    description:
+      "Evidence-based sessions to help individuals identify and change negative thinking patterns and behaviors.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1664378616928-dc6842677183?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 2,
+    title: "Trauma-Informed Counseling",
+    description:
+      "Safe and supportive therapy for clients dealing with past trauma, PTSD, or emotionally distressing experiences.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1665990292585-6a39c5229bc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 3,
+    title: "Family & Relationship Therapy",
+    description:
+      "Facilitated sessions designed to resolve conflict, strengthen communication, and rebuild trust in relationships.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1665990294269-f1d6c35ab9d1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweSUyMHNlc3Npb258ZW58MHx8MHx8fDA%3D",
+  },
+];
 
   return (
     <main className={classes.home}>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
-import { slide as Menu } from "react-burger-menu";
 import classes from "./Header.module.scss";
 import logo1 from "./logo2.jpeg";
 
@@ -18,7 +17,7 @@ const Header = ({ darkText }) => {
       </Link>
 
       {/* Desktop Nav */}
-      <ul className={classes.desktopNav} style={{ color }}>
+      <ul style={{ color }}>
         <li>
           <Link to="/about" className={classes.link} style={{ color }}>
             about us
@@ -79,45 +78,7 @@ const Header = ({ darkText }) => {
         </div>
       )}
 
-      {/* Burger Menu
-      <section className={classes.menuOverlay}>
-        <Menu
-          right
-          isOpen={isOpen}
-          onStateChange={({ isOpen }) => setOpen(isOpen)}
-        >
-          <Link className="menu-item" to="/" onClick={() => setOpen(false)}>
-            Home
-          </Link>
-          <Link
-            className="menu-item"
-            to="/about"
-            onClick={() => setOpen(false)}
-          >
-            About Us
-          </Link>
-          <Link
-            className="menu-item"
-            to="/services"
-            onClick={() => setOpen(false)}
-          >
-            Services
-          </Link>
-          <Link className="menu-item" to="/blog" onClick={() => setOpen(false)}>
-            Blog
-          </Link>
-          <Link className="menu-item" to="/faqs" onClick={() => setOpen(false)}>
-            FAQs
-          </Link>
-          <Link
-            className="menu-item"
-            to="/contact"
-            onClick={() => setOpen(false)}
-          >
-            Contact
-          </Link>
-        </Menu>
-      </section> */}
+      
     </header>
   );
 };

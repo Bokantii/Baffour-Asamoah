@@ -39,7 +39,7 @@ ORDER:Base + typograpghy > general layout + grid > page layout >components
     }
   }
   @if $breakpoint == tab-landscape {
-    @media (max-width: 75em) {
+    @media (max-width: 80em) {
       @content;
     }
   }
