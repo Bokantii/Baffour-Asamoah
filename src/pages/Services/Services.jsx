@@ -5,7 +5,8 @@ import Service from "../../components/Service/Service.jsx";
 import Button from "../../components/Button/Button.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import { Link } from "react-router-dom";
-
+import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
+import ScrollSlideRight from "./../../components/ScrollSlideRight/ScrollSlideRight";
 const Services = () => {
   const myActivity = [
     {
@@ -35,17 +36,20 @@ const Services = () => {
 
       {/* Service list */}
       <section className={classes.serviceList}>
-        <section className={classes.service_content}>
-          {myActivity.map((activity) => (
-            <Service
-              key={activity.id}
-              imgSrc={activity.image}
-              heading={activity.title}
-              body={activity.description}
-              width={"45%"}
-            />
-          ))}
-        </section>
+        <ScrollFadeIn>
+          {" "}
+          <section className={classes.service_content}>
+            {myActivity.map((activity) => (
+              <Service
+                key={activity.id}
+                imgSrc={activity.image}
+                heading={activity.title}
+                body={activity.description}
+                width={"45%"}
+              />
+            ))}
+          </section>
+        </ScrollFadeIn>
 
         <p className={classes.ctaBtn}>
           <Button href="/contact">Book a Consultation</Button>
@@ -53,36 +57,43 @@ const Services = () => {
       </section>
 
       {/* What to Expect */}
+
       <section className={classes.offerings_section}>
-        <section className={classes.offerings_image_section}>
-          <img
-            src="https://plus.unsplash.com/premium_photo-1665990294609-10c594d94614?w=800&auto=format&fit=crop&q=60"
-            alt="offering"
-            className={classes.offerings_image}
-          />
-          <section className={classes.offerings_text}>
-            <h3>What to Expect</h3>
-            <ul className={classes.offerings}>
-              <li className={classes.offering}>
-                We offer a free 15-minute phone consultation to understand your
-                needs and how we can best support you.
-              </li>
-              <li className={classes.offering}>
-                Each session with Dr. Baffour lasts 50 minutes and is held
-                online or in-person upon request.
-              </li>
-            </ul>
+        <ScrollFadeIn>
+          <section className={classes.offerings_image_section}>
+            <img
+              src="https://plus.unsplash.com/premium_photo-1665990294609-10c594d94614?w=800&auto=format&fit=crop&q=60"
+              alt="offering"
+              className={classes.offerings_image}
+            />
+
+            <section className={classes.offerings_text}>
+              <h3>What to Expect</h3>
+              <ul className={classes.offerings}>
+                <li className={classes.offering}>
+                  We offer a free 15-minute phone consultation to understand
+                  your needs and how we can best support you.
+                </li>
+                <li className={classes.offering}>
+                  Each session with Dr. Baffour lasts 50 minutes and is held
+                  online or in-person upon request.
+                </li>
+              </ul>
+            </section>
           </section>
-        </section>
+        </ScrollFadeIn>
       </section>
 
       {/* CTA */}
       <section className={classes.ctaSection}>
         <p className={classes.ctaText}>
-          <span>Still exploring your options?</span><br/>
-          <Link to="/contact" className={classes.ctaLink}>
-            We’re here to help
-          </Link>
+          <ScrollFadeIn>
+            <span>Still exploring your options?</span>
+            <br />
+            <Link to="/contact" className={classes.ctaLink}>
+              We’re here to help
+            </Link>
+          </ScrollFadeIn>
         </p>
       </section>
 

@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header.jsx";
 import BlogItem from "../../components/BlogItem/BlogItem.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import classes from "./Blog.module.scss";
-import {useLocation} from 'react-router-dom';
+import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
 const Blog = () => {
   const blogItems = [
     {
@@ -51,18 +51,20 @@ const Blog = () => {
   return (
     <>
       <main className={classes.blog}>
-        <Header darkText />
-        <section className={classes.blogItems}>
-          {blogItems.map((blogItem) => (
-            <BlogItem
-              key={blogItem.id}
-              imgSrc={blogItem.imgSrc}
-              title={blogItem.title}
-              href={blogItem.href}
-              alt={blogItem.alt}
-            />
-          ))}
-        </section>
+        <Header darkText />{" "}
+        <ScrollFadeIn>
+          <section className={classes.blogItems}>
+            {blogItems.map((blogItem) => (
+              <BlogItem
+                key={blogItem.id}
+                imgSrc={blogItem.imgSrc}
+                title={blogItem.title}
+                href={blogItem.href}
+                alt={blogItem.alt}
+              />
+            ))}
+          </section>
+        </ScrollFadeIn>
       </main>
       <Footer />
     </>

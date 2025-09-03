@@ -1,9 +1,18 @@
 @import "./../../sass/mixins/mobile_responsive.scss";
-
+@import './../../sass/colors/colors.scss';
 .header {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  @include respond(phone) {
+    width: 100%;
+  }
+  @include respond(tab-portrait) {
+    width: 100%;
+  }
+  @include respond(tab-landscape) {
+    width: 100%;
+  }
 
   .homeLink {
     color: #ffffff;
@@ -29,6 +38,56 @@
         font-size: 1.2rem;
         font-weight: 300;
         text-transform: capitalize;
+      }
+    }
+  }
+  .hamburgerMenu{
+    display: none;
+    @include respond(phone){
+      display: block;
+      z-index: 5000;
+    }
+  }
+  .mobileOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $color-snow; // ← You can change this color
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+
+    // Optional fade-in animation
+    animation: fadeIn 0.3s ease-out forwards;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .overlayNav {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $color-davys-gray;
+        text-transform: capitalize;
+
+        &:hover {
+          color: #777;
+        }
       }
     }
   }

@@ -10,7 +10,7 @@ import ProfessionaLInfo from "../../components/ProfessionaLInfo/ProfessionaLInfo
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
 // import myActivity from "./activity.js";
 import Service from "../../components/Service/Service.jsx";
-import backgroundImg from "./background.png";
+
 const Home = () => {
   const myActivity = [
     {
@@ -41,19 +41,24 @@ const Home = () => {
 
   return (
     <main className={classes.home}>
-      <Hero url={backgroundImg} alternate>
-        <ScrollFadeIn>
-          <main>
-            <h1 className={classes.heading}>
+      <Hero
+        url={
+          "https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D"
+        }
+        alternate
+      >
+        <main>
+          <h1 className={classes.heading}>
+            <ScrollFadeIn>
               empowering healing through culture,care{" "}
               <span style={{ textTransform: "lowercase" }}>and</span> clinical
               excellence
-            </h1>
-            <p className={classes.subHeading}>
-              Psychotherapy | Social Work | Mental Advocacy
-            </p>
-          </main>
-        </ScrollFadeIn>
+            </ScrollFadeIn>
+          </h1>
+          <p className={classes.subHeading}>
+            Psychotherapy | Social Work | Mental Advocacy
+          </p>
+        </main>
 
         <Link to="/contact" className={classes.cta}>
           Book a Consultation

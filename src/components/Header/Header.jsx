@@ -1,51 +1,123 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Hamburger from "hamburger-react";
+import { slide as Menu } from "react-burger-menu";
 import classes from "./Header.module.scss";
 import logo1 from "./logo2.jpeg";
+
 const Header = ({ darkText }) => {
   const color = darkText ? "black" : "#ffffff";
-  const logo = darkText ? (
-    <img src={logo1} alt="logo" style={{ width: "100px", height: "100px" }}></img>
-  ) : (
-    "Asamoah and Associates Inc."
-  );
+  const [isOpen, setOpen] = useState(false);
+  const burgerColor = isOpen ? "#565254" : "#ffffff";
+  const darkBurgerColor = isOpen ? "#565254" : "black";
+  const actualBurgerColor = darkText ? darkBurgerColor : burgerColor;
   return (
     <header className={classes.header}>
-      <Link to="/" className={classes.homeLink} style={{ color: color }}>
+      <Link to="/" className={classes.homeLink} style={{ color }}>
         Asamoah and Associates Inc.
       </Link>
-      <ul style={{ color: color }}>
+
+      {/* Desktop Nav */}
+      <ul className={classes.desktopNav} style={{ color }}>
         <li>
-          <Link to="/about" className={classes.link} style={{ color: color }}>
+          <Link to="/about" className={classes.link} style={{ color }}>
             about us
           </Link>
         </li>
         <li>
-          <Link
-            to="/services"
-            className={classes.link}
-            style={{ color: color }}
-          >
+          <Link to="/services" className={classes.link} style={{ color }}>
             services
           </Link>
         </li>
         <li>
-          <Link to="/blog" className={classes.link} style={{ color: color }}>
+          <Link to="/blog" className={classes.link} style={{ color }}>
             blog
           </Link>
         </li>
         <li>
-          <Link to="/faqs" className={classes.link} style={{ color: color }}>
+          <Link to="/faqs" className={classes.link} style={{ color }}>
             FAQs
           </Link>
         </li>
         <li>
-          <Link to="/contact" className={classes.link} style={{ color: color }}>
+          <Link to="/contact" className={classes.link} style={{ color }}>
             contact
           </Link>
         </li>
       </ul>
-      <div></div>
+
+      {/* Hamburger icon */}
+      <div
+        className={classes.hamburgerMenu}
+        style={{ color: actualBurgerColor }}
+      >
+        <Hamburger toggled={isOpen} toggle={setOpen} />
+      </div>
+
+      {isOpen && (
+        <div className={classes.mobileOverlay}>
+          <nav className={classes.overlayNav}>
+            <Link to="/" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+            <Link to="/about" onClick={() => setOpen(false)}>
+              About
+            </Link>
+            <Link to="/services" onClick={() => setOpen(false)}>
+              Services
+            </Link>
+            <Link to="/blog" onClick={() => setOpen(false)}>
+              Blog
+            </Link>
+            <Link to="/faqs" onClick={() => setOpen(false)}>
+              FAQs
+            </Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>
+              Contact
+            </Link>
+          </nav>
+        </div>
+      )}
+
+      {/* Burger Menu
+      <section className={classes.menuOverlay}>
+        <Menu
+          right
+          isOpen={isOpen}
+          onStateChange={({ isOpen }) => setOpen(isOpen)}
+        >
+          <Link className="menu-item" to="/" onClick={() => setOpen(false)}>
+            Home
+          </Link>
+          <Link
+            className="menu-item"
+            to="/about"
+            onClick={() => setOpen(false)}
+          >
+            About Us
+          </Link>
+          <Link
+            className="menu-item"
+            to="/services"
+            onClick={() => setOpen(false)}
+          >
+            Services
+          </Link>
+          <Link className="menu-item" to="/blog" onClick={() => setOpen(false)}>
+            Blog
+          </Link>
+          <Link className="menu-item" to="/faqs" onClick={() => setOpen(false)}>
+            FAQs
+          </Link>
+          <Link
+            className="menu-item"
+            to="/contact"
+            onClick={() => setOpen(false)}
+          >
+            Contact
+          </Link>
+        </Menu>
+      </section> */}
     </header>
   );
 };

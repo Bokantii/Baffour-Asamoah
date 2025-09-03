@@ -1,11 +1,12 @@
 import { useLocation } from "react-router-dom";
 import BlogPostPage from "./../../../../components/BlogPostPage/BlogPostPage";
-
+import ScrollFadeIn from './../../../../components/ScrollFadeIn/ScrollFadeIn';
 const AntiOppression = () => {
   const location = useLocation();
   const { title, imgSrc } = location.state || {};
   const children = (
-    <article>
+      <article>
+    <ScrollFadeIn>
       <header>
         <p>
           In a world shaped by systems of inequality, stepping into a helping
@@ -20,7 +21,9 @@ const AntiOppression = () => {
           care for others—and ourselves.
         </p>
       </header>
+    </ScrollFadeIn>
 
+    <ScrollFadeIn delay={0.1}>
       <section>
         <h2>Why Anti-Oppressive Practice Matters</h2>
         <ul>
@@ -51,7 +54,9 @@ const AntiOppression = () => {
           </li>
         </ul>
       </section>
+    </ScrollFadeIn>
 
+    <ScrollFadeIn delay={0.2}>
       <section>
         <h2>Starting Anti-Oppressive Work Can Feel Overwhelming</h2>
         <p>You might be wondering:</p>
@@ -67,7 +72,9 @@ const AntiOppression = () => {
           how we can respond with humility and accountability.
         </p>
       </section>
+    </ScrollFadeIn>
 
+    <ScrollFadeIn delay={0.3}>
       <section>
         <h2>The Power of a Reflective Practitioner</h2>
         <p>
@@ -84,7 +91,9 @@ const AntiOppression = () => {
           <li>Advocates for justice, even when it's uncomfortable</li>
         </ul>
       </section>
+    </ScrollFadeIn>
 
+    <ScrollFadeIn delay={0.4}>
       <section>
         <h2>What Anti-Oppressive Practice Looks Like in Real Life</h2>
         <p>
@@ -110,7 +119,9 @@ const AntiOppression = () => {
           serving the communities you care about.
         </p>
       </section>
+    </ScrollFadeIn>
 
+    <ScrollFadeIn delay={0.5}>
       <section>
         <h2>The Takeaway</h2>
         <p>
@@ -125,7 +136,9 @@ const AntiOppression = () => {
           going.
         </p>
       </section>
+    </ScrollFadeIn>
 
+    <ScrollFadeIn delay={0.6}>
       <footer>
         <h3>Ready to Learn More or Work Together?</h3>
         <p>
@@ -135,7 +148,9 @@ const AntiOppression = () => {
           pressure—just a space to connect and reflect.
         </p>
       </footer>
-    </article>
+    </ScrollFadeIn>
+  </article>
+
   );
   return (
     <>

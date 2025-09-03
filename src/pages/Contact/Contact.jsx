@@ -3,13 +3,14 @@ import Hero from "../../components/Hero/Hero.jsx";
 import classes from "./Contact.module.scss";
 import Footer from "../../components/Footer/Footer.jsx";
 import Input from "../../components/Input/Input.jsx";
-
+import ScrollFadeIn from './../../components/ScrollFadeIn/ScrollFadeIn';
 const Contact = () => {
   return (
     <main className={classes.contact}>
       <Hero alternate>
         <section className={classes.formSection}>
-          <h1>contact us</h1>
+          <ScrollFadeIn><h1>contact us</h1></ScrollFadeIn>
+          
           <p>
             Book your free 15-minute consultation to connect with me, ask
             questions about my approach, share what you’d like to work on, and

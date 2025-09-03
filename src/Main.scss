@@ -10,3 +10,16 @@ body {
    font-family: "Bricolage Grotesque", sans-serif;
   overflow-x: hidden;
 }
+
+/* e.g., index.scss or App.scss */
+.bm-menu {
+  background: #fff;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+.bm-item {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #222;
+}

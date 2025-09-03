@@ -1,7 +1,7 @@
 import React from "react";
 import BackgroundImage from "../../components/BackgroundImage/BackgroundImage.jsx";
 import ProfessionaLInfo from "../../components/ProfessionaLInfo/ProfessionaLInfo.jsx";
-
+import backgroundImg from "./background.png";
 import Hero from "../../components/Hero/Hero.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import Accordion from "../../components/Accordion/Accordion.jsx";
@@ -10,9 +10,7 @@ const About = () => {
   return (
     <main className={classes.aboutSection}>
       <Hero
-        url={
-          "https://plus.unsplash.com/premium_photo-1665990292585-6a39c5229bc8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVudGFsJTIwaGVhbHRoJTIwdGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D"
-        }
+        url={backgroundImg}
         heroText="We believe in listening deeply, honoring every story, and walking with you toward wellness."
       />
 
