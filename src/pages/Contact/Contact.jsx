@@ -1,38 +1,114 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "../../components/Hero/Hero.jsx";
 import classes from "./Contact.module.scss";
 import Footer from "../../components/Footer/Footer.jsx";
 import Input from "../../components/Input/Input.jsx";
-import ScrollFadeIn from './../../components/ScrollFadeIn/ScrollFadeIn';
+import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ firstName: "", lastName: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  };
+
   return (
     <main className={classes.contact}>
       <Hero alternate>
         <section className={classes.formSection}>
-          <ScrollFadeIn><h1>contact us</h1></ScrollFadeIn>
-          
+          <ScrollFadeIn>
+            <h1>contact us</h1>
+          </ScrollFadeIn>
+
           <p>
             Book your free 15-minute consultation to connect with me, ask
             questions about my approach, share what you’d like to work on, and
             see if we’re a good fit.
           </p>
-          <form action="#" className={classes.form}>
+
+          <form onSubmit={handleSubmit} className={classes.form}>
             <div className={classes.formName}>
-              <Input label="First Name" />
-              <Input label="Last Name" />
+              <Input
+                label="First Name"
+                id="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+              <Input
+                label="Last Name"
+                id="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
             </div>
 
-            <Input type="email" label="Email" />
+            <Input
+              type="email"
+              label="Email"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+
             <section className={classes.textAreaSection}>
               <label htmlFor="message">Message</label>
-              <textarea name="#" id="message" required/>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
             </section>
-            <button type="submit">send</button>
+
+            <button type="submit">Send</button>
+
+            {status === "success" && (
+              <p style={{ color: "green", textAlign: "center",marginLeft:"25%" }}>
+                ✅ Message sent successfully! Dr. Baffour will get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p style={{ color: "red",textAlign:"center" }}>
+                ❌ Something went wrong. Please try again.
+              </p>
+            )}
           </form>
         </section>
       </Hero>
 
-      <Footer alternate/>
+      <Footer alternate />
     </main>
   );
 };
