@@ -134,7 +134,7 @@ const Home = () => {
 
       <BackgroundImage
         url={
-          "https://images.unsplash.com/photo-1693703276057-c2d7d9b88b23?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2hpbmluZyUyMGxpZ2h0fGVufDB8fDB8fHww"
+          "https://images.unsplash.com/photo-1507667522877-ad03f0c7b0e0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZSUyMGRhcmt8ZW58MHx8MHx8fDA%3D"
         }
       >
         <section className={classes.backgroundImg_content}>
