@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
-import BouncingBall from "./pages/GSAP/GSAP";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import YouthSupport from "./pages/Blog/BlogPages/YouthSupport/YouthSupport";
@@ -21,7 +20,6 @@ function App() {
     { path: "/blog", element: <Blog /> },
     { path: "/services", element: <Services /> },
     { path: "/faqs", element: <FAQs /> },
-    { path: "/ball", element: <BouncingBall /> },
     { path: "/contact", element: <Contact /> },
     { path: "/blog/youth-support", element: <YouthSupport /> },
     { path: "/blog/trauma", element: <Trauma /> },
