@@ -10,9 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // @include respond(phone){
-  //   padding: .8rem
-  // }
+
    .heroContent {
     @include heroTextContent;
 

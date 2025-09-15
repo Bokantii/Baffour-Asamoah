@@ -9,6 +9,7 @@
     border-radius: 5px;
     display: inline-block;
     text-transform: uppercase;
+    margin: auto;
     @include respond(phone){
       width: 100%;
     

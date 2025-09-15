@@ -43,8 +43,11 @@ const Home = () => {
     <main className={classes.home}>
       <Hero
         url={
-          "https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D"
+          "https://images.pexels.com/photos/4262424/pexels-photo-4262424.jpeg"
         }
+        // url={
+        //   "https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D"
+        // }
         alternate
       >
         <main>
@@ -103,7 +106,7 @@ const Home = () => {
               Narrative Therapy, supporting individuals affected by systemic
               barriers and intergenerational trauma.
             </p>
-            <p style={{ marginTop: "1rem" }}>
+            <p style={{ marginTop: "1rem" }} className={classes.buttonContainer}>
               <Button href="/about">Meet Dr. Baffour</Button>
             </p>
           </section>
@@ -120,7 +123,7 @@ const Home = () => {
                 imgSrc={activity.image}
                 heading={activity.title}
                 body={activity.description}
-                width={"30%"}
+     
               />
             );
           })}
@@ -136,6 +139,7 @@ const Home = () => {
         url={
           "https://images.unsplash.com/photo-1507667522877-ad03f0c7b0e0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZSUyMGRhcmt8ZW58MHx8MHx8fDA%3D"
         }
+        
       >
         <section className={classes.backgroundImg_content}>
           <p className={classes.client_testimonial}>

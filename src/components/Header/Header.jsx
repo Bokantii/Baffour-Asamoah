@@ -13,7 +13,7 @@ const Header = ({ darkText }) => {
   return (
     <header className={classes.header}>
       <Link to="/" className={classes.homeLink} style={{ color }}>
-        Asamoah and Associates Inc.
+        Asamoah & Associates Inc.
       </Link>
 
       {/* Desktop Nav */}

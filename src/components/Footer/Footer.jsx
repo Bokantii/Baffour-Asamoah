@@ -24,7 +24,7 @@ const Footer = ({ alternate }) => {
         
        
         <p className={classes.copyright}>
-          &copy; {new Date().getFullYear()} Asamoah and Associates Inc. All
+          &copy; {new Date().getFullYear()} Asamoah & Associates Inc. All
           rights reserved.
         </p>
       </section></ScrollFadeIn>

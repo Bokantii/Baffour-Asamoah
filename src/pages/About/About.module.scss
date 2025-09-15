@@ -15,6 +15,11 @@
     @include respond(phone) {
       width: 100%;
     }
+    @include respond(tab-portrait) {
+      width: 100%;
+      text-align: center;
+      margin-top: .6rem;
+    }
 
     h2 {
       font-size: 1.7rem;

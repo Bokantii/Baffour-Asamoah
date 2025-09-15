@@ -14,6 +14,10 @@
     flex-direction: column-reverse;
     gap: 1rem;
   }
+  @include respond(tab-portrait) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
   .leftSection {
     display: flex;
     flex-direction: column;
@@ -21,6 +25,7 @@
     padding: 0.3rem;
     .copyright {
       font-size: 1rem;
+      margin-top: 1rem;
     }
     @include respond(phone) {
       gap: 1rem;

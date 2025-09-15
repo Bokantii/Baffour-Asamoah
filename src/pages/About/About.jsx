@@ -11,8 +11,11 @@ const About = () => {
     <main className={classes.aboutSection}>
       <Hero
         url={
-          "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D"
+          "https://images.unsplash.com/photo-1694299352873-0c29d862e87a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGJsYWNrJTIwd29tYW4lMjB0aGVyYXB5fGVufDB8fDB8fHww"
         }
+        // url={
+        //   "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D"
+        // }
         heroText="We believe in listening deeply, honoring every story, and walking with you toward wellness."
       />
 

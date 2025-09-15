@@ -47,6 +47,10 @@
       display: block;
       z-index: 5000;
     }
+    @include respond(tab-portrait){
+      display: block;
+      z-index: 5000;
+    }
   }
   .mobileOverlay {
     position: fixed;
