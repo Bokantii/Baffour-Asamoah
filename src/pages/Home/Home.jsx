@@ -8,7 +8,7 @@ import BackgroundImage from "../../components/BackgroundImage/BackgroundImage.js
 import Footer from "../../components/Footer/Footer.jsx";
 import ProfessionaLInfo from "../../components/ProfessionaLInfo/ProfessionaLInfo.jsx";
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
-// import myActivity from "./activity.js";
+import family from './familyUpdated.jpeg';
 import Service from "../../components/Service/Service.jsx";
 
 const Home = () => {
@@ -43,7 +43,7 @@ const Home = () => {
     <main className={classes.home}>
       <Hero
         url={
-          "https://images.pexels.com/photos/4262424/pexels-photo-4262424.jpeg"
+          family
         }
         // url={
         //   "https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D"
