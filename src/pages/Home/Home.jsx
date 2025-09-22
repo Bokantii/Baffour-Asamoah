@@ -78,9 +78,9 @@ const Home = () => {
               individuals feel heard, supported, and empowered. Our
               trauma-informed practice prioritizes dignity and safety,
               especially for racialized and marginalized communities in Ontario.
-              Using evidence-based approaches such as
-              <strong>Cognitive Behavioural Therapy (CBT)</strong>,
-              <strong>Dialectical Behavior Therapy (DBT)</strong>, and
+              Using evidence-based approaches such as {""}
+              <strong>Cognitive Behavioural Therapy (CBT)</strong>,{""}
+              <strong>Dialectical Behavior Therapy (DBT)</strong>, and {""}
               <strong>Narrative Therapy</strong>, we tailor sessions to each
               person's story. We center lived experiences shaped by systemic
               oppression, anti-Black racism, and intergenerational trauma. Our
