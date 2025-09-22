@@ -8,43 +8,41 @@ import BackgroundImage from "../../components/BackgroundImage/BackgroundImage.js
 import Footer from "../../components/Footer/Footer.jsx";
 import ProfessionaLInfo from "../../components/ProfessionaLInfo/ProfessionaLInfo.jsx";
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
-import family from './familyUpdated.jpeg';
+import family from "./familyUpdated.jpeg";
 import Service from "../../components/Service/Service.jsx";
 
 const Home = () => {
   const myActivity = [
-  {
-    id: 1,
-    title: "Cognitive Behavioral Therapy (CBT)",
-    description:
-      "Evidence-based sessions to help individuals identify and change negative thinking patterns and behaviors.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1664378616928-dc6842677183?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
-  },
-  {
-    id: 2,
-    title: "Trauma-Informed Counseling",
-    description:
-      "Safe and supportive therapy for clients dealing with past trauma, PTSD, or emotionally distressing experiences.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1665990292585-6a39c5229bc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
-  },
-  {
-    id: 3,
-    title: "Family & Relationship Therapy",
-    description:
-      "Facilitated sessions designed to resolve conflict, strengthen communication, and rebuild trust in relationships.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1665990294269-f1d6c35ab9d1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweSUyMHNlc3Npb258ZW58MHx8MHx8fDA%3D",
-  },
-];
+    {
+      id: 1,
+      title: "Cognitive Behavioral Therapy (CBT)",
+      description:
+        "Evidence-based sessions to help individuals identify and change negative thinking patterns and behaviors.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1664378616928-dc6842677183?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 2,
+      title: "Trauma-Informed Counseling",
+      description:
+        "Safe and supportive therapy for clients dealing with past trauma, PTSD, or emotionally distressing experiences.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1665990292585-6a39c5229bc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 3,
+      title: "Family & Relationship Therapy",
+      description:
+        "Facilitated sessions designed to resolve conflict, strengthen communication, and rebuild trust in relationships.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1665990294269-f1d6c35ab9d1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlcmFweSUyMHNlc3Npb258ZW58MHx8MHx8fDA%3D",
+    },
+  ];
 
   return (
     <main className={classes.home}>
       <Hero
-        url={
-          family
-        }
+        url={family}
         // url={
         //   "https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoZXJhcHl8ZW58MHx8MHx8fDA%3D"
         // }
@@ -80,9 +78,10 @@ const Home = () => {
               individuals feel heard, supported, and empowered. Our
               trauma-informed practice prioritizes dignity and safety,
               especially for racialized and marginalized communities in Ontario.
-              Using evidence-based approaches like
-              <strong>Cognitive Behavioural Therapy (CBT)</strong> and
-              <strong> Narrative Therapy</strong>, we tailor sessions to each
+              Using evidence-based approaches such as
+              <strong>Cognitive Behavioural Therapy (CBT)</strong>,
+              <strong>Dialectical Behavior Therapy (DBT)</strong>, and
+              <strong>Narrative Therapy</strong>, we tailor sessions to each
               person's story. We center lived experiences shaped by systemic
               oppression, anti-Black racism, and intergenerational trauma. Our
               goal is to walk beside our clients with empathy, professionalism,
@@ -106,7 +105,10 @@ const Home = () => {
               Narrative Therapy, supporting individuals affected by systemic
               barriers and intergenerational trauma.
             </p>
-            <p style={{ marginTop: "1rem" }} className={classes.buttonContainer}>
+            <p
+              style={{ marginTop: "1rem" }}
+              className={classes.buttonContainer}
+            >
               <Button href="/about">Meet Dr. Baffour</Button>
             </p>
           </section>
@@ -123,7 +125,6 @@ const Home = () => {
                 imgSrc={activity.image}
                 heading={activity.title}
                 body={activity.description}
-     
               />
             );
           })}
@@ -139,7 +140,6 @@ const Home = () => {
         url={
           "https://images.unsplash.com/photo-1507667522877-ad03f0c7b0e0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZSUyMGRhcmt8ZW58MHx8MHx8fDA%3D"
         }
-        
       >
         <section className={classes.backgroundImg_content}>
           <p className={classes.client_testimonial}>

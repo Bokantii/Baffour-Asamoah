@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import classes from "./Header.module.scss";
-import logo1 from "./logo2.jpeg";
+// import logo1 from "./logo.jpeg";
 
 const Header = ({ darkText }) => {
   const color = darkText ? "black" : "#ffffff";
