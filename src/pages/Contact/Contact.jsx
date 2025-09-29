@@ -107,11 +107,8 @@ const Contact = () => {
 
             {status === "success" && (
               <p
-                style={{
-                  color: "green",
-                  textAlign: "center",
-                  marginLeft: "25%",
-                }}
+               
+                className={classes.successMessage}
               >
                 ✅ Message sent successfully! Dr. Baffour will get back to you
                 soon.
