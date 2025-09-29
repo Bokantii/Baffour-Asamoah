@@ -1,8 +1,9 @@
 @import "./../../sass/mixins/mobile_responsive.scss";
-@import './../../sass/colors/colors.scss';
+@import "./../../sass/colors/colors.scss";
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
   @include respond(phone) {
     width: 100%;
@@ -18,6 +19,26 @@
     color: #ffffff;
     text-decoration: none;
     font-size: 1.8rem;
+    .logoImg {
+      width: 4em;
+      height: 3em;
+      @include respond(phone) {
+        width: 3em;
+        height: 2em;
+      }
+      @include respond(tab-portrait) {
+        width: 3em;
+        height: 2em;
+      }
+      @include respond(tab-landscape) {
+        width: 4em;
+        height: 3em;
+      }
+      @include respond(big-desktop) {
+        width: 6em;
+        height: 4em;
+      }
+    }
   }
   ul {
     display: flex;
@@ -41,13 +62,13 @@
       }
     }
   }
-  .hamburgerMenu{
+  .hamburgerMenu {
     display: none;
-    @include respond(phone){
+    @include respond(phone) {
       display: block;
       z-index: 5000;
     }
-    @include respond(tab-portrait){
+    @include respond(tab-portrait) {
       display: block;
       z-index: 5000;
     }

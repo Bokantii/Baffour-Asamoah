@@ -88,7 +88,7 @@ const Home = () => {
               and cultural sensitivity throughout their healing journey.
             </ScrollFadeIn>
           </p>
-          <Link className={classes.cta}>Learn More</Link>
+          <Link className={classes.cta} to='/about'>Learn More</Link>
         </section>
       </section>
       <ScrollFadeIn>

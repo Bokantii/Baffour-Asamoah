@@ -4,7 +4,7 @@ import classes from "./Contact.module.scss";
 import Footer from "../../components/Footer/Footer.jsx";
 import Input from "../../components/Input/Input.jsx";
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
-
+import Spinner from "../../components/Spinner/Spinner.jsx";
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -14,22 +14,27 @@ const Contact = () => {
   });
 
   const [status, setStatus] = useState("");
-
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus("");
 
     try {
-      const res = await fetch("https://baffour-asamoah-backend.onrender.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://baffour-asamoah-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (res.ok) {
         setStatus("success");
@@ -40,6 +45,8 @@ const Contact = () => {
     } catch (error) {
       console.error(error);
       setStatus("error");
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -92,20 +99,31 @@ const Contact = () => {
               />
             </section>
 
-            <button type="submit">Send</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send"}
+            </button>
+
+            {loading && <Spinner />}
 
             {status === "success" && (
-              <p style={{ color: "green", textAlign: "center",marginLeft:"25%" }}>
-                ✅ Message sent successfully! Dr. Baffour will get back to you soon.
+              <p
+                style={{
+                  color: "green",
+                  textAlign: "center",
+                  marginLeft: "25%",
+                }}
+              >
+                ✅ Message sent successfully! Dr. Baffour will get back to you
+                soon.
               </p>
             )}
             {status === "error" && (
-              <p style={{ color: "red",textAlign:"center" }}>
+              <p style={{ color: "red", textAlign: "center" }}>
                 ❌ Something went wrong. Please try again.
               </p>
             )}
           </form>
-        </section> 
+        </section>
       </Hero>
 
       <Footer alternate />

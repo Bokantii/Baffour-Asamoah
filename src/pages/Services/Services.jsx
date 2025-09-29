@@ -41,11 +41,12 @@ const Services = () => {
           <section className={classes.service_content}>
             {myActivity.map((activity) => (
               <Service
+                altClassName
                 key={activity.id}
                 imgSrc={activity.image}
                 heading={activity.title}
                 body={activity.description}
-                width={"45%"}
+                width={"100%"}
               />
             ))}
           </section>

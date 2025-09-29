@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import classes from "./Header.module.scss";
-// import logo1 from "./logo.jpeg";
+import logo1 from "./logo_white_new.png";
+import logo2 from "./logo_black_new.png";
 
 const Header = ({ darkText }) => {
   const color = darkText ? "black" : "#ffffff";
@@ -10,10 +11,11 @@ const Header = ({ darkText }) => {
   const burgerColor = isOpen ? "#565254" : "#ffffff";
   const darkBurgerColor = isOpen ? "#565254" : "black";
   const actualBurgerColor = darkText ? darkBurgerColor : burgerColor;
+  const logo = darkText ? logo2 : logo1;
   return (
     <header className={classes.header}>
       <Link to="/" className={classes.homeLink} style={{ color }}>
-        Asamoah & Associates Inc.
+        <img src={logo} alt="" className={classes.logoImg}/>
       </Link>
 
       {/* Desktop Nav */}
