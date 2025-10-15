@@ -109,7 +109,7 @@ const Home = () => {
               style={{ marginTop: "1rem" }}
               className={classes.buttonContainer}
             >
-              <Button href="/about">Meet Dr. Baffour</Button>
+              <Button href="/about">Meet Dr. Asamoah</Button>
             </p>
           </section>
         </ProfessionaLInfo>

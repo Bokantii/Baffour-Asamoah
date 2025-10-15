@@ -19,7 +19,7 @@ const FAQs = () => {
             {
               title: "What should I expect in my first session?",
               content:
-                "Your first session will focus on understanding your story, goals, and any concerns you may have. It’s a space for building trust and clarity, not pressure.",
+                "Your first session will focus on understanding your story, goals, and any concerns you may have. It’s safe a space for building trust and clarity, not pressure.",
             },
             {
               title: "How long is each therapy session?",
@@ -29,7 +29,7 @@ const FAQs = () => {
             {
               title: "Do you offer virtual or in-person therapy?",
               content:
-                "Yes, we offer both virtual (via secure video) and in-person sessions at our Toronto office to accommodate your preference and comfort.",
+                "Yes, we offer both virtual (via secure video) and in-person sessions at our GTA offices to accommodate your preference and comfort.",
             },
             {
               title: "Is everything I share confidential?",
