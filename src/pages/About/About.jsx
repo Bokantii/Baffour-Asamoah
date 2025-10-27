@@ -6,10 +6,21 @@ import Hero from "../../components/Hero/Hero.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import Accordion from "../../components/Accordion/Accordion.jsx";
 import classes from "./About.module.scss";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <main className={classes.aboutSection}>
+      <Helmet>
+        <title>
+          About Asamoah Associates | Our Mission to Build Healthier Minds &
+          Communities
+        </title>
+        <meta
+          name="description"
+          content="Learn about Dr. Baffour Asamoah and our mission to make therapy accessible, inclusive, and life-changing. Our team brings years of experience in counselling and youth development."
+        />
+      </Helmet>
       <Hero
         url={
           "https://images.unsplash.com/photo-1694299352873-0c29d862e87a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGJsYWNrJTIwd29tYW4lMjB0aGVyYXB5fGVufDB8fDB8fHww"

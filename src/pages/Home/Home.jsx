@@ -10,7 +10,7 @@ import ProfessionaLInfo from "../../components/ProfessionaLInfo/ProfessionaLInfo
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
 import family from "./familyUpdated.jpeg";
 import Service from "../../components/Service/Service.jsx";
-
+import { Helmet } from "react-helmet";
 const Home = () => {
   const myActivity = [
     {
@@ -41,6 +41,36 @@ const Home = () => {
 
   return (
     <main className={classes.home}>
+      <Helmet>
+        <title>
+          Asamoah Associates | Professional Counselling & Youth Support Services
+          in Toronto
+        </title>
+        <meta
+          name="description"
+          content="Empowering individuals and families through therapy, youth mentorship, and mental wellness programs. Discover compassionate counselling with Asamoah Associates in Toronto."
+        />
+        <meta
+          name="keywords"
+          content="counselling Toronto, psychotherapy, therapy, mental health, youth mentorship, family therapy, Dr. Baffour Asamoah"
+        />
+
+        <meta
+          property="og:title"
+          content="Asamoah Associates | Professional Counselling & Youth Support Services in Toronto"
+        />
+        <meta
+          property="og:description"
+          content="Empowering individuals and families through therapy, youth mentorship, and mental wellness programs. Discover compassionate counselling with Asamoah Associates in Toronto."
+        />
+        <meta
+          property="og:image"
+          content="https://www.asamoahassociates.com/assets/og-image.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.asamoahassociates.com/" />
+      </Helmet>
+
       <Hero
         url={family}
         // url={
@@ -88,7 +118,9 @@ const Home = () => {
               and cultural sensitivity throughout their healing journey.
             </ScrollFadeIn>
           </p>
-          <Link className={classes.cta} to='/about'>Learn More</Link>
+          <Link className={classes.cta} to="/about">
+            Learn More
+          </Link>
         </section>
       </section>
       <ScrollFadeIn>

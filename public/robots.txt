@@ -3,3 +3,7 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.asamoahassociates.com/sitemap.xml
+
+
+
+

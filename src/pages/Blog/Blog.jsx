@@ -4,6 +4,7 @@ import BlogItem from "../../components/BlogItem/BlogItem.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import classes from "./Blog.module.scss";
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
+import { Helmet } from "react-helmet";
 const Blog = () => {
   const blogItems = [
     {
@@ -51,6 +52,37 @@ const Blog = () => {
   return (
     <>
       <main className={classes.blog}>
+        <Helmet>
+          <title>
+            Asamoah Associates Blog | Mental Health Tips & Wellness Insights
+          </title>
+          <meta
+            name="description"
+            content="Read expert insights on mental health, therapy, and self-care. Our blog offers actionable guidance and thought-provoking articles to support your emotional well-being."
+          />
+          <meta
+            name="keywords"
+            content="mental health blog, therapy tips, counselling insights, self-care, wellness, Toronto psychotherapy blog"
+          />
+
+          <meta
+            property="og:title"
+            content="Asamoah Associates Blog | Mental Health Tips & Wellness Insights"
+          />
+          <meta
+            property="og:description"
+            content="Explore articles on therapy, personal growth, and emotional wellness from Asamoah Associates."
+          />
+          <meta
+            property="og:image"
+            content="https://www.asamoahassociates.com/assets/og-image.jpg"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:url"
+            content="https://www.asamoahassociates.com/blog"
+          />
+        </Helmet>
         <Header darkText />{" "}
         <ScrollFadeIn>
           <section className={classes.blogItems}>

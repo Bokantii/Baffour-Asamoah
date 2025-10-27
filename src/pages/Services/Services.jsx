@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer.jsx";
 import { Link } from "react-router-dom";
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
 import ScrollSlideRight from "./../../components/ScrollSlideRight/ScrollSlideRight";
+import { Helmet } from "react-helmet";
 const Services = () => {
   const myActivity = [
     {
@@ -29,6 +30,38 @@ const Services = () => {
 
   return (
     <main className={classes.services}>
+      <Helmet>
+        <title>
+          Therapy & Counselling Services | Individual, Family, and Youth Support
+        </title>
+        <meta
+          name="description"
+          content="Explore our therapy and counselling services, including individual therapy, family counselling, and youth mentorship. We provide tailored mental health solutions for every stage of life."
+        />
+        <meta
+          name="keywords"
+          content="therapy Toronto, counselling services, family counselling, individual therapy, youth support, psychotherapy"
+        />
+
+        <meta
+          property="og:title"
+          content="Therapy & Counselling Services | Asamoah Associates"
+        />
+        <meta
+          property="og:description"
+          content="Explore our therapy and counselling services designed for individuals, families, and youth across Toronto."
+        />
+        <meta
+          property="og:image"
+          content="https://www.asamoahassociates.com/assets/og-image.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.asamoahassociates.com/services"
+        />
+      </Helmet>
+
       <Hero
         url="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?w=800&auto=format&fit=crop&q=60"
         heroText="Compassionate care tailored to your mental wellness journey."

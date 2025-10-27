@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer.jsx";
 import Input from "../../components/Input/Input.jsx";
 import ScrollFadeIn from "./../../components/ScrollFadeIn/ScrollFadeIn";
 import Spinner from "../../components/Spinner/Spinner.jsx";
+import { Helmet } from "react-helmet";
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -45,13 +46,45 @@ const Contact = () => {
     } catch (error) {
       console.error(error);
       setStatus("error");
-    }finally{
+    } finally {
       setLoading(false);
     }
   };
 
   return (
     <main className={classes.contact}>
+      <Helmet>
+        <title>
+          Contact Asamoah Associates | Book a Therapy Session or Consultation
+        </title>
+        <meta
+          name="description"
+          content="Reach out to Asamoah Associates for appointments, inquiries, or consultations. We offer both virtual and in-person therapy sessions in the GTA."
+        />
+        <meta
+          name="keywords"
+          content="contact therapist Toronto, book therapy session, psychotherapy consultation, counselling contact form, Dr. Baffour Asamoah"
+        />
+
+        <meta
+          property="og:title"
+          content="Contact Asamoah Associates | Book a Therapy Session or Consultation"
+        />
+        <meta
+          property="og:description"
+          content="Contact our team to book a session or consultation. We offer both virtual and in-person therapy across the GTA."
+        />
+        <meta
+          property="og:image"
+          content="https://www.asamoahassociates.com/assets/og-image.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.asamoahassociates.com/contact"
+        />
+      </Helmet>
+
       <Hero alternate>
         <section className={classes.formSection}>
           <ScrollFadeIn>
@@ -106,10 +139,7 @@ const Contact = () => {
             {loading && <Spinner />}
 
             {status === "success" && (
-              <p
-               
-                className={classes.successMessage}
-              >
+              <p className={classes.successMessage}>
                 ✅ Message sent successfully! Dr. Baffour will get back to you
                 soon.
               </p>
