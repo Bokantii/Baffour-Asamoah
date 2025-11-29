@@ -8,9 +8,6 @@
   .heroContent {
     @include heroTextContent;
 
-    .heroText {
-      @include heroText;
-    }
   }
 }
 

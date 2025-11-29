@@ -73,7 +73,7 @@ const Events = () => {
 
       <Hero
         url="https://images.unsplash.com/photo-1624499961691-1930789066bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHRvd25oYWxsJTIwbWVldGluZyUyMGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww"
-        heroText="Dr. Asamoah is a regular speaker at conferences, town halls, and community events focused on mental health, family well-being, and social justice."
+        heroText="Dr. Asamoah is a regular speaker at conferences, town halls, and community events"
       />
 
       <section className={classes.content}>
