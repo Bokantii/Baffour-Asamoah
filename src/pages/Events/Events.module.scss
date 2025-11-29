@@ -1,5 +1,17 @@
+@import "./../../sass/mixins/hero_text.scss";
+
 .eventsPage {
   background-color: #f7f7f8;
+  .heroText {
+    @include heroText;
+  }
+  .heroContent {
+    @include heroTextContent;
+
+    .heroText {
+      @include heroText;
+    }
+  }
 }
 
 .content {
@@ -54,7 +66,7 @@
 .flyer {
   width: 100%;
   display: block;
-  aspect-ratio: 4 / 3;       /* keeps all flyers same height */
+  aspect-ratio: 4 / 3; /* keeps all flyers same height */
   object-fit: cover;
 }
 
