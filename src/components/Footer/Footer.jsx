@@ -89,6 +89,11 @@ const Footer = ({ alternate }) => {
               contact
             </Link>
           </li>
+          <li>
+            <Link to="/events" className={classes.link}>
+              events
+            </Link>
+          </li>
         </ul>
       </ScrollFadeIn>
     </footer>

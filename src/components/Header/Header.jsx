@@ -45,6 +45,11 @@ const Header = ({ darkText }) => {
             contact
           </Link>
         </li>
+        <li>
+          <Link to="/events" className={classes.link} style={{ color }}>
+            events
+          </Link>
+        </li>
       </ul>
 
       {/* Hamburger icon */}
@@ -75,6 +80,9 @@ const Header = ({ darkText }) => {
             </Link>
             <Link to="/contact" onClick={() => setOpen(false)}>
               Contact
+            </Link>
+            <Link to="/events" onClick={() => setOpen(false)}>
+              Events
             </Link>
           </nav>
         </div>

@@ -10,6 +10,7 @@ import AntiOppression from "./pages/Blog/BlogPages/AntiOppression/AntiOppression
 import MentalWellness from "./pages/Blog/BlogPages/MentalWellness/MentalWellness";
 import MentalHealth from "./pages/Blog/BlogPages/MentalHealth/MentalHealth";
 import FAQs from "./pages/FAQs/FAQs";
+import Events from "./pages/Events/Events";
 
 import "./Main.scss";
 
@@ -21,6 +22,7 @@ function App() {
     { path: "/services", element: <Services /> },
     { path: "/faqs", element: <FAQs /> },
     { path: "/contact", element: <Contact /> },
+    { path: "/events", element: <Events /> },
     { path: "/blog/youth-support", element: <YouthSupport /> },
     { path: "/blog/trauma", element: <Trauma /> },
     { path: "/blog/anti-oppression", element: <AntiOppression /> },
