@@ -3,6 +3,8 @@ import classes from "./Footer.module.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import ScrollFadeIn from "./../ScrollFadeIn/ScrollFadeIn";
@@ -53,6 +55,14 @@ const Footer = ({ alternate }) => {
             <a href="mailto:asamoah.associates@ymail.com">
               <FontAwesomeIcon
                 icon={faEnvelope}
+                size="lg"
+                className={classes.linkedinIcon}
+              />
+            </a>
+            {/* Instagram */}
+            <a href="https://www.instagram.com/asamoah_associates_inc?igsh=aG94b3l4YThzdDBs">
+              <FontAwesomeIcon
+                icon={faInstagram}
                 size="lg"
                 className={classes.linkedinIcon}
               />
