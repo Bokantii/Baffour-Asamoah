@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../../components/Hero/Hero.jsx";
 import classes from "./Home.module.scss";
 import { Link } from "react-router-dom";
-import baffour from "./Baffpour_updated.png";
+import baffour from "./baffour7.png";
 import Button from "../../components/Button/Button.jsx";
 import BackgroundImage from "../../components/BackgroundImage/BackgroundImage.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
