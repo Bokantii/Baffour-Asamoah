@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ProfessionaLInfo.module.scss";
-import baffour from "./baffour7.png";
+import baffour from "./NENE2993.png";
 import ScrollFadeIn from "./../ScrollFadeIn/ScrollFadeIn";
 const ProfessionaLInfo = ({ children, reversedFlex }) => {
   const flexDirectionB = reversedFlex ? "row-reverse" : "row";
